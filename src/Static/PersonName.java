@@ -1,3 +1,5 @@
+package Static;
+
 public class PersonName {
 
     private String lastName;
@@ -16,7 +18,7 @@ public class PersonName {
         return firstName;
     }
 
-    // возвращает PersonName из заданной строки
+    // возвращает Static.PersonName из заданной строки
     public static PersonName parse(String fullName){
         /* Метод split разделяет строку по символу пробела.
         В результате в переменной parts будет массив из двух элементов: фамилия, имя*/

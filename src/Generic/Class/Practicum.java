@@ -1,4 +1,4 @@
-package Generic;
+package Generic.Class;
 
 public class Practicum {
     public static void main(String[] args) {

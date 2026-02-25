@@ -1,3 +1,5 @@
+package Static;
+
 public class Bird {
 
     private static int count = 0;

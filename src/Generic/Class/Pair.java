@@ -1,4 +1,4 @@
-package Generic;
+package Generic.Class;
 
 public class Pair<K, V> {
 

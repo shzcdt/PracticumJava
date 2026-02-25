@@ -1,4 +1,4 @@
-package Polymorphism.ad_hoc;
+package Polymorphism.ad_hoc.dynamicAd_hoc;
 
 public class Hamlet extends Actor{
 
@@ -7,4 +7,3 @@ public class Hamlet extends Actor{
         return "Быть или не быть, вот в чем главный вопрос";
     }
 }
-

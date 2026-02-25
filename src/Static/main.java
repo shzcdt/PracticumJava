@@ -1,12 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
+package Static;
 
 
 public class main {
     public static void main(String[] args) {
-//        Bird tweety = new Bird();
-//        Bird pepper = new Bird();
-//        Bird flossie = new Bird();
+//        Static.Bird tweety = new Static.Bird();
+//        Static.Bird pepper = new Static.Bird();
+//        Static.Bird flossie = new Static.Bird();
 //        int max = Integer.max(5, 7);
 //
 //        System.out.println(max);
@@ -15,12 +14,12 @@ public class main {
 //        Arrays.sort(buses);
 //        System.out.println(Arrays.toString(buses));
 
-//        Wolf dog1 = new Dog();
+//        Static.Wolf dog1 = new Static.Dog();
 //        dog1.behaviorIfMeetHuman();
-//        Dog dog2 = new Dog();
+//        Static.Dog dog2 = new Static.Dog();
 //        dog2.behaviorIfMeetHuman();
 //
-//        PersonName name = PersonName.parse("Дубинов Иван");
+//        Static.PersonName name = Static.PersonName.parse("Дубинов Иван");
 //
 //        System.out.println(name.getFullName());
 

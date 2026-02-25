@@ -1,4 +1,7 @@
 package Interface;
 
-public interface Mammal {
+public interface Mammal extends Animal{
+    void eat();
+    void giveMilk();
 }
+

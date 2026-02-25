@@ -1,4 +1,4 @@
-package Polymorphism.ad_hoc;
+package Polymorphism.ad_hoc.dynamicAd_hoc;
 
 public class Practicum{
     public static void main(String[] args) {
