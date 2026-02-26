@@ -29,5 +29,23 @@ public class Practicum{
         items.sort(itemPopularityComparator);
 
         System.out.println(items);
+
+        System.out.println("После сортировки в лескиграфической последовательности: ");
+
+        ItemStringSensitiveNameComparator itemStringSensitiveNameComparator = new ItemStringSensitiveNameComparator();
+
+        items.sort(itemPopularityComparator);
+        System.out.println(items);
+
+        ArrayList<String> fruits = new ArrayList<>();
+
+        fruits.add("Банан");
+        fruits.add("Апельсин");
+        fruits.add("Яблоко");
+        fruits.add("Гуава");
+        fruits.add("Груша");
+
+        fruits.sort(String.CASE_INSENSITIVE_ORDER);
+        System.out.println(fruits);
     }
 }
