@@ -55,6 +55,8 @@ public class Practicum {
         System.out.println("Пустое ли множество uniqueNames: " + uniqueNames.isEmpty());
         uniqueNames.clear();
         System.out.println("Пустое ли множество uniqueNames: " + uniqueNames.isEmpty());
+
+        System.out.println("Закончил изучать Set и Tree, все в конспекте");
     }
 
     public static String generateNewCard() {
