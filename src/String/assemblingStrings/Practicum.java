@@ -46,5 +46,6 @@ public class Practicum {
         String pets = String.join(", ", arrayOfPets);
 
         System.out.println("Мои питомцы: " + pets);
+
     }
 }
