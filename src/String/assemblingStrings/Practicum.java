@@ -25,5 +25,26 @@ public class Practicum {
         System.out.println(numbers[1]);
         System.out.printf("%35s", tee);
 
+
+        System.out.println("\nПрактика разделения строки");
+        String students = "Примечание1* Примечание2* Примечание3";
+
+        String[] split = students.split("\\*");
+
+        System.out.println(split[0]);
+        System.out.println(split[1]);
+        System.out.println(split[2]);
+
+        System.out.println("\nПрактика преобразования массива в строку:");
+
+        String[] arrayOfPets = new String[]{
+                "Кот Батончик",
+                "Хомяк Рафаэль",
+                "Попугай Картошка"
+        };
+
+        String pets = String.join(", ", arrayOfPets);
+
+        System.out.println("Мои питомцы: " + pets);
     }
 }
