@@ -8,6 +8,7 @@ public class Practicum {
         } catch (NumberShouldBePositiveException exception) {
             System.out.println("Число должно быть положительным");
         } catch (IncorrectInputStringException exception) {
+            exception.printStackTrace();
             System.out.println("Необходимо ввести число");
         }
     }
