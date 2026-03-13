@@ -12,8 +12,6 @@ public class Practicum {
             System.out.println("Вторая линия: " + scanner.nextLine());
             // создано только две линии, следующее получение сгенерирует ошибку
             System.out.println("Третья линия: " + scanner.nextLine());
-        } catch (NoSuchElementException exception) {
-            System.out.println("Ошибка: линии закончились");
         } finally {
             System.out.println("Закрываем сканер");
             scanner.close();
