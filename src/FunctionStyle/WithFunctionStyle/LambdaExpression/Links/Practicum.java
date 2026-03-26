@@ -12,5 +12,7 @@ public class Practicum {
                 "США",
                 ""
         ));
+
+        countries.removeIf(String::isEmpty);
     }
 }
