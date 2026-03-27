@@ -1,32 +1,38 @@
 package Optional;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class Practicum {
-    public static Optional<String> longestName(List<String> names) {
-        if (names.isEmpty()){
-            return Optional.empty();
-        }
-        String maxName = names.get(0);
-        for (String name : names){
-            if (name.length() > maxName.length()){
-                maxName = name;
+    public static Optional<String> longestName(List<Optional<String>> maybeNames) {
+        int max = 0;
+        Optional<String> strMax = Optional.empty();
+        for (Optional<String> str : maybeNames) {
+            if (str.isPresent()) {
+                if (max < str.get().length()) {
+                    max = str.get().length();
+                    strMax = str;
+                }
             }
         }
 
-        return Optional.of(maxName); // создание обертки со значением maxName
+        return strMax;
     }
 
     public static void main(String[] args) {
-        List<String> names = new ArrayList<>();
-        Optional<String> longest = longestName(names);
-        if (longest.isPresent()){
-            System.out.println("Самое длиноое имя состоит из " + longest.get().length() + " символов");
+        Optional<String> longest = longestName(List.of(
+                Optional.of("Max"),
+                Optional.empty(),
+                Optional.of("Alexey"),
+                Optional.empty(),
+                Optional.empty(),
+                Optional.of("Alex")
+        ));
+        if (longest.isPresent()) {
+            System.out.println("Самое длинное имя состоит из " + longest.get().length() + " символов");
             System.out.println(longest);
         } else {
-            System.out.println("Такого имени нет");
+            System.out.println("Слов не встретилось");
         }
     }
 }
