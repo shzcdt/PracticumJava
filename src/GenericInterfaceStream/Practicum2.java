@@ -1,8 +1,7 @@
 package GenericInterfaceStream;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.OptionalInt;
+import java.util.*;
+import java.util.function.DoubleToIntFunction;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -35,7 +34,7 @@ public class Practicum2 {
                 .allMatch(title -> title.startsWith("фильм"));
         System.out.println("Сегодня показывают только фильмы? " + isAllUppercased);
 
-        System.out.println("Использование anyMatch в Stream");
+        System.out.println("Использование anyMatch и промежуточной операции filter() в Stream");
 
 
         boolean found = Stream.of("фильм Компилятор-убийца", "сериал Спринг", "сериал Алгоритмы", "фильм скобки")
@@ -61,5 +60,23 @@ public class Practicum2 {
         List<String> collected = Stream.of("фильм Компилятор-убийца", "сериал Спринг", "сериал Алгоритмы", "фильм скобки")
                 .collect(Collectors.toList());
         System.out.println("Списком: " + collected);
+
+        System.out.println("Использование промежуточной операции map() в Stream");
+
+        Map<String, Integer> ratings = new HashMap<>();
+        ratings.put("фильм Компилятор-убийца", 5);
+        ratings.put("сериал Спринг", 5);
+        ratings.put("сериал Алгоритмы", 4);
+        ratings.put("фильм Матрица: двумерный обход", 3);
+
+        Stream.of("фильм Компилятор-убийца", "сериал Спринг", "сериал Алгоритмы", "фильм Матрица: двумерный обход")
+                .map(ratings::get)
+                .forEach(System.out::println);
+
+        System.out.println("flatMap() в Stream");
+
+        Stream.of("ПРОРЫВ В ЭКОНОМИКЕ", "ЛУЧШЕЕ ДЕТЯМ", "ЛУЧШЕЕ В ЭКОНОМИКЕ")
+                .flatMap(sentence -> Arrays.stream(sentence.split(" ")))
+                .forEach(System.out::println);
     }
 }
