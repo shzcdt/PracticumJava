@@ -1,8 +1,11 @@
 package Tests;
 
+import org.junit.Test;
+
 public class DiscountCalculatorTest {
     DiscountCalculator discountCalculator = new DiscountCalculator();
 
+    @Test
     public void shouldGiveNoDiscountForValue999() {
         int buySum = 999;
         int expectedSum = 999;
