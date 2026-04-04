@@ -13,6 +13,8 @@ public class DiscountCalculator {
     public static void main(String[] args) {
         DiscountCalculator calculator = new DiscountCalculator();
         System.out.println(calculator.sunAfterDiscount(2000));
+
+        System.out.println("Тест");
     }
 }
 
