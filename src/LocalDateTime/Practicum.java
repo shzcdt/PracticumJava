@@ -1,5 +1,6 @@
 package LocalDateTime;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -41,7 +42,8 @@ public class Practicum {
         if (now.equals(newYear)){
             System.out.println("С новым годом!");
         }
-
+        Duration duration = Duration.ofSeconds(20000);
+        System.out.println(duration);
 
         System.out.println("Практика преобразования LocalDateTime через DateTimeFormatter");
 
